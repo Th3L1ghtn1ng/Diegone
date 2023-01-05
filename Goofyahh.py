@@ -1,4 +1,5 @@
 import argparse
+import logging
 import requests
 import sys
 
@@ -78,8 +79,8 @@ def scan(url):
     try:
       r = requests.get(url + payload)
         print("[+] Vulnerable: " + url + payload)
-    except:
-      print("[-] Error occurred")
+    except Exception as e:
+      logging.exception("Error occurred while checking payload: " + payload)
 
 # main function
 if __name__ == "__main__":

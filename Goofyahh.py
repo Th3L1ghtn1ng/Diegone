@@ -77,10 +77,9 @@ def scan(url):
   for payload in payloads:
     try:
       r = requests.get(url + payload)
-      if r.status_code == 200:
         print("[+] Vulnerable: " + url + payload)
-    #except:
-      #print("[-] Error occurred")
+    except:
+      print("[-] Error occurred")
 
 # main function
 if __name__ == "__main__":

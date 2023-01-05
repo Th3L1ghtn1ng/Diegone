@@ -8,6 +8,17 @@ print("Please choose an option:")
 print("[1] start a simple XSS tester")
 print("[2] start a simple SQLi tester")
 print("[2] ????????")
+goofyahh = """
+
+
+    ___    __    __         ______                   
+   /   |  / /_  / /_  ____ /_  __/__  ____ _____ ___ 
+  / /| | / __ \/ __ \/ __ `// / / _ \/ __ `/ __ `__ \
+ / ___ |/ /_/ / /_/ / /_/ // / /  __/ /_/ / / / / / /
+/_/  |_/_.___/_.___/\__,_//_/  \___/\__,_/_/ /_/ /_/ 
+                    
+A simple SQLi tester                    
+"""
 scemochilegge = """
 
 ________  .__                                            
@@ -53,18 +64,7 @@ if '<input' in response.text:
 else:
      print('Il sito non sembra essere vulnerabile a XSS')
 if choice == "2":
-     goofyahh = """
-
-
-    ___    __    __         ______                   
-   /   |  / /_  / /_  ____ /_  __/__  ____ _____ ___ 
-  / /| | / __ \/ __ \/ __ `// / / _ \/ __ `/ __ `__ \
- / ___ |/ /_/ / /_/ / /_/ // / /  __/ /_/ / / / / / /
-/_/  |_/_.___/_.___/\__,_//_/  \___/\__,_/_/ /_/ /_/ 
-                    
-A simple SQLi tester                    
-"""
-print (goofyahh)
+  print (goofyahh)
 def scan(url):
   # create a list of payloads to try
   payloads = [
